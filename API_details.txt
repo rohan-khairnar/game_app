@@ -17,7 +17,7 @@ req_data: {
 
 //////////
 get games by filtering and ordering by : /games/get_games_filter - method : post
-Note: order_by key is compulsory, user can pass all (platform,genre,editors_choice) or may be two of them or one of them as per your choice.
+Note: order_by key is compulsory and the value will be desc or asc, user can pass all (platform,genre,editors_choice) or may be two of them or one of them as per your choice.
 req_data: {
     "platform":"tt",
     "order_by": "desc / asc"

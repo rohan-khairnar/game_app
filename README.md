@@ -3,7 +3,7 @@ Test Game App
 
 ## How to run project
 1. Create directory : $mkidr game_app
-2. clone repository : https://github.com/rohan-khairnar/game_app.git
+2. clone repository : $git clone https://github.com/rohan-khairnar/game_app.git
 3. Create Virtual environment : $Virtualenv ven ( or any other package like pipenv)
 4. install requirements : $pip install -r requirements.txt
 5. update mysql database path which is in dev.cfg file (Please provide complete path up to database name)
