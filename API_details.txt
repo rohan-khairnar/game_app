@@ -1,0 +1,59 @@
+Login : /games/login - method : post
+req_data: {
+    "email":"rohan@gmail.com",
+    "password":"rohan123"
+}
+////////////
+logout : games/logout - method : get
+
+///////////
+Sign up : /games/signup - method : post
+req_data: {
+    "firstname":"rohan",
+    "lastname": "khairnar",
+    "email":"rohan@gmail.com",
+    "password":"rohan123"
+}
+
+//////////
+get games by filtering and ordering by : /games/get_games_filter - method : post
+Note: order_by key is compulsory, user can pass all (platform,genre,editors_choice) or may be two of them or one of them as per your choice.
+req_data: {
+    "platform":"tt",
+    "order_by": "desc / asc"
+} or
+{
+    "genre":"tt",
+    "order_by": "desc / asc"
+} or
+{
+    "editors_choice":"tt",
+    "order_by": "desc / asc"
+} or
+{
+"platform":"tt",
+"editors_choice":"tt",
+"genre":"tt",
+"order_by": "desc / asc"
+}
+
+////////
+update one or many games : /games/update_game - method: put
+Note: compulsion to pass all fields shown below.
+req_data: [{"gid":1, "title":"","platform":"new","score":0,"genre":"new","editors_choice":"s"},
+{"gid":2, "title":"","platform":"new","score":0,"genre":"new","editors_choice":"s"},
+{"gid":3, "title":"","platform":"new","score":0,"genre":"new","editors_choice":"s"}]
+
+/////////
+add one or more games : /games/add_game - method: post
+Note: compulsion to pass all fields mention below
+req_data : [{ "title":"Newnew","platform":"new","score":0,"genre":"new","editors_choice":"s"},
+{"title":"Neneenw","platform":"new","score":0,"genre":"new","editors_choice":"s"},
+{"title":"Nneeew","platform":"new","score":0,"genre":"new","editors_choice":"s"}]
+
+///////
+get game by title : /games/get_game?title=<title> - method : get
+
+///////
+delete game by id : /games/delete_games - method : delete
+req_data : { "ids":1}
